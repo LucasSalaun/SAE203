@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil — Mon Site</title>
+    <title>Erreur-404</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
             <a href="../index.html">Accueil</a>
             <a href="../connexion/index.html">Connexion</a>
             <a href="../inscription/index.html">Inscription</a>
-            <a href="../admin/index.html">Administration</a>
+            <a href="../private/index.html">Administration</a>
         </nav>
     </header>
     <main>
@@ -22,3 +22,12 @@
     <footer>
         <p>Groupe Ollivier-Leleu-Salaun — 2026</p>
     </footer>
+
+    <!--
+  À ajouter dans /etc/apache2/sites-available/000-default.conf
+  (dans le bloc <VirtualHost>) :
+
+  ErrorDocument 404 /errors/404.html
+  ErrorDocument 403 /errors/403.html
+  ErrorDocument 500 /errors/500.html
+-->
