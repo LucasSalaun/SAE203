@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil — Mon Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER COMMUN -->
+    <header>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="connexion/index.html">Connexion</a>
+            <a href="inscription/index.html">Inscription</a>
+            <a href="admin/index.html">Administration</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bienvenue</h1>
+        
+        <!-- ZONE DYNAMIQUE : date et heure -->
+        <section class="info-dynamique">
+            <p>Nous sommes le : <span class="placeholder-date">[DATE PHP]</span></p>
+            <p>Il est : <span class="placeholder-heure">[HEURE PHP]</span></p>
+        </section>
+
+        <!-- ZONE DYNAMIQUE : géolocalisation -->
+        <section class="info-dynamique">
+            <p>Votre position : <span class="placeholder-geo">[POSITION PHP]</span></p>
+        </section>
+
+        <!-- ZONE DYNAMIQUE : type de terminal -->
+        <section class="info-dynamique">
+            <p>Vous utilisez un : <span class="placeholder-device">[PC / MOBILE PHP]</span></p>
+        </section>
+    </main>
+
+    <!-- FOOTER COMMUN -->
+    <footer>
+        <p>Groupe Ollivier-Leleu-Salaun — 2026</p>
+    </footer>
+</body>
+</html>
