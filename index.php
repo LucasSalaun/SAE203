@@ -49,13 +49,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil — SAE203</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- HEADER COMMUN -->
     <header>
         <nav>
-            <a href="index.html">Accueil</a>
+            <p><strong>Navigation :</strong></p>
+            <a href="index.php">Accueil</a>
             <a href="connexion/index.html">Connexion</a>
             <a href="inscription/index.html">Inscription</a>
             <a href="private/index.html">Administration</a>
