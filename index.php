@@ -94,3 +94,29 @@
     </footer>
 </body>
 </html>
+
+<!-- A FAIRE SUR NOUVELLE VM 
+ 
+Dans le terminal :
+
+    htpasswd -c /etc/apache2/pass admin
+    mdp : lannion
+
+Dans apache2.conf
+
+    <Directory "/var/www/html/private">
+    AuthType Basic
+    AuthName "Veuillez saisir votre mot de login/passe"
+    AuthUserFile "/etc/apache2/pass"
+    Require valid-user
+    </Directory>
+
+Dans site available/000-default
+dans la partie VitualHost
+
+    ErrorDocument 404 /errors/404.html
+  	ErrorDocument 403 /errors/403.html
+  	ErrorDocument 500 /errors/500.html
+
+
+-->
