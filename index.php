@@ -1,47 +1,47 @@
 <?php
- $agent = $_SERVER['HTTP_USER_AGENT'];
- $appareil = get_appareil($agent);
- $OS = get_OS($agent);
- $date = date("d/m/Y");
- $date_lettre = date("l F Y");
- $heure = date("H:i:s");
- $UserIp = getenv('REMOTE_ADDR');
+    $agent = $_SERVER['HTTP_USER_AGENT'];
+    $appareil = get_appareil($agent);
+    $OS = get_OS($agent);
+    $date = date("d/m/Y");
+    $date_lettre = date("l F Y");
+    $heure = date("H:i:s");
+    $UserIp = getenv('REMOTE_ADDR');
 
- function get_appareil($agent){
- $mobiles = ['android','mobile','iphone','ipad','phone'];
- $ordinateurs = ['windows','macintosh','linux'];
+    function get_appareil($agent){
+        $mobiles = ['android','mobile','iphone','ipad','phone'];
+        $ordinateurs = ['windows','macintosh','linux'];
 
- foreach ($mobiles as $device){
- if(stripos($agent, $device) != false ){
- return 'Mobile';
- }
- }
- 
- foreach($ordinateurs as $device){
- if(stripos($agent, $device) != false){
- return 'Ordinateur';
- }
- }
+        foreach ($mobiles as $device){
+            if(stripos($agent, $device) != false ){
+                return 'Mobile';
+            }
+        }
 
- return 'Appareil Inconnu';
- } 
+        foreach($ordinateurs as $device){
+            if(stripos($agent, $device) != false){
+                return 'Ordinateur';
+            }
+        }
 
- function get_OS($agent){
- $liste_OS = array( 'android' => 'Android',
- 'iphone' => 'iOS',
- 'ipad' => 'iOS',
- 'windows' => 'Windows OS',
- 'linux' => 'Linux OS',
- 'macintosh' => 'Mac OS');
- 
- foreach($liste_OS as $key => $val){
- if(stripos($agent, $key)){
- return $val;
- }
- }
+        return 'Appareil Inconnu';
+    } 
 
- return 'OS inconnu';
- }
+    function get_OS($agent){
+        $liste_OS = array( 'android' => 'Android',
+        'iphone' => 'iOS',
+        'ipad' => 'iOS',
+        'windows' => 'Windows OS',
+        'linux' => 'Linux OS',
+        'macintosh' => 'Mac OS');
+
+        foreach($liste_OS as $key => $val){
+            if(stripos($agent, $key)){
+            return $val;
+            }
+        }
+
+        return 'OS inconnu';
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
